@@ -1,0 +1,23 @@
+{% extends 'blogapp/base.html' %}
+{% block content %}
+
+<h1 style= "font-family: 'Russo One', sans-serif;; "> New Post</h1>
+
+<form class = 'post-form' method = "POST">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <button type = 'submit' class = 'save btn btn-default' name = 'SAVE'>SAVE</button>
+
+    </form>
+
+<!--###########################################
+## Medium Editor 
+###########################################-->
+
+<script>var editor = new MediumEditor('.editable');</script>
+
+{% endblock %}
+
+## this medium class will work as widgets
+
